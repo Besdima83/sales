@@ -81,10 +81,10 @@ export default function BasicTable() {
     const [item, setItem] = React.useState({});
 
     const [open, setOpen] = React.useState(false);
-    const handleClickOpen = (item) => {
-        setItem(item)
-        setOpen(true)
-    };
+    // const handleClickOpen = (item) => {
+    //     setItem(item)
+    //     setOpen(true)
+    // };
 
     const handleClose = () => {
         setOpen(false)
@@ -211,7 +211,7 @@ export default function BasicTable() {
                                             defaultValue="NoPay"
                                             onChange={(e) => {
                                                 handleChangeStatus(e.target.value)
-                                            }} value={item.status}>
+                                            }} value={status}>
                                     <Grid item xs={6} justifyContent="space-between">
                                         <FormControlLabel
                                             className={classes.radio_btn}
