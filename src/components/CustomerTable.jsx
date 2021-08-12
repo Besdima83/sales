@@ -81,10 +81,10 @@ export default function BasicTable() {
     const [item, setItem] = React.useState({});
 
     const [open, setOpen] = React.useState(false);
-    // const handleClickOpen = (item) => {
-    //     setItem(item)
-    //     setOpen(true)
-    // };
+    const handleClickOpen = (item) => {
+        setItem(item)
+        setOpen(true)
+    };
 
     const handleClose = () => {
         setOpen(false)
@@ -347,9 +347,9 @@ export default function BasicTable() {
                                     </Typography>
                                 </TableCell>
                                 <TableCell>
-                                    {/*<IconButton onClick={() => {handleClickOpen(row)}}>*/}
-                                    {/*    <EditIcon/>*/}
-                                    {/*</IconButton>*/}
+                                    <IconButton onClick={() => {handleClickOpen(row)}}>
+                                        <EditIcon/>
+                                    </IconButton>
                                     <IconButton onClick={() => {deleteCustomer(row.id)}}>
                                         <DeleteOutlineIcon
                                         />
