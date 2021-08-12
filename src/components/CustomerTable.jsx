@@ -6,6 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import EditIcon from '@material-ui/icons/Edit';
 import Paper from '@material-ui/core/Paper';
 import {
     Dialog,
@@ -212,7 +213,7 @@ export default function BasicTable() {
                                             onChange={(e) => {
                                                 handleChangeStatus(e.target.value)
                                             }} value={status}>
-                                    <Grid item xs={6} justifyContent="space-between">
+                                    <Grid item xs={6}>
                                         <FormControlLabel
                                             className={classes.radio_btn}
                                             value="NoPay"
@@ -295,7 +296,7 @@ export default function BasicTable() {
             }
         })
         return (
-            <Typography variant='h4'>Total: {comission}</Typography>
+            <Typography>Total: {comission}</Typography>
         )
     }
     return (
@@ -359,7 +360,7 @@ export default function BasicTable() {
                         ))}
                     </TableBody>
                 </Table>
-                <Typography variant='h4'> <CalcComission /></Typography>
+                <Typography> <CalcComission /></Typography>
             </TableContainer>
             <EditCustomerInformation />
         </div>

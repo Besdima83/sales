@@ -251,7 +251,7 @@ export default function AddCustomerForm() {
                                                 onChange={(e) => {
                                                     handleChangeStatus(e.target.value)
                                                 }} value={status}>
-                                        <Grid item xs={6} justifyContent="space-between">
+                                        <Grid item xs={6}>
                                             <FormControlLabel
                                                 className={classes.radio_btn}
                                                 value="NoPay"
