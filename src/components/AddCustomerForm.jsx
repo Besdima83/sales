@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
         display: "contents"
     },
     fab: {
+        zIndex: '1',
         position: 'absolute',
         bottom: theme.spacing(2),
         right: theme.spacing(2),
@@ -62,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
 export default function AddCustomerForm() {
     const classes = useStyles();
     const dispatch = useDispatch()
-    // const customers = useSelector(state => state.customers)
 
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {
@@ -153,6 +153,8 @@ export default function AddCustomerForm() {
         setAmount('')
         setOrderDate(Date.now)
         setDeliveryDate(Date.now)
+        setPaymentDate(Date.now)
+        setDueDate(Date.now)
         handleClose()
     }
     return (
